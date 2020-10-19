@@ -279,7 +279,12 @@ namespace Mi_Ameport
                 tr.Cells.Add(tc);
 
                 TableCell tc1 = new TableCell();
-                tc1.Text = n.Numero.ToString();
+                string numero = n.Numero.ToString();
+                for (int i = numero.Length; i < 5; i++)
+                {
+                    numero = "0" + numero;
+                }
+                tc1.Text = numero;
                 tc1.HorizontalAlign = HorizontalAlign.Left;
                 tr.Cells.Add(tc1);
 
