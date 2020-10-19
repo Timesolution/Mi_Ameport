@@ -43,7 +43,7 @@ namespace Mi_Ameport
                     //this.UpdatePanel3.Visible = true;
 
                     //Response.Redirect("SolicitudCredencialF.aspx?dni=" + this.txtDNI.Text);
-                    Response.Redirect("Default.aspx");
+                    Response.Redirect("Default.aspx",false);
                 }
                 else
                 {
