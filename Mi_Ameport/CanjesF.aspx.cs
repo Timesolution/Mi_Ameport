@@ -49,6 +49,7 @@ namespace Mi_Ameport
                 foreach (var p in Productos)
                 {
                     var mosaico = this.cargarMosaicoCanje(p);
+                    if(mosaico != null)
                     this.phPremios.Controls.Add(mosaico);
                 }
             }
@@ -62,58 +63,73 @@ namespace Mi_Ameport
         {
             try
             {
-                ContactoMosaico cm = (ContactoMosaico)Page.LoadControl("Controles/ContactoMosaico.ascx");
-                
-                cm.LitDescripcion.Text = p.Descripcion;
-                cm.LitMarca.Text = p.Marca1.descripcion;
-                cm.LitPuntos.Text = "Puntos: " + p.Productos_Financiacion.Where(x => x.Cuotas == 1).FirstOrDefault().Importe.ToString();
-                cm.btnLink.HRef = "http://www.ameport.org.ar/Store/ArticuloDetalle?url=&num=" + p.id;
-                //cargo imagen
-                string debug = ConfigurationManager.AppSettings["Debug"];
-                if (debug == "si")
+                var socio = Session["Socio"] as Ameport_Api.Modelo.Socio;
+                var puntos = this.cont.obtenerMovimientosPuntosSocio(socio.id);
+                int puntosAcum = 0;
+                foreach (var pu in puntos)
                 {
-                    cm.Imagen.ImageUrl = "/images/Canjes/no_picture.jpg";
+                    puntosAcum += (int)pu.Cantidad;
                 }
-                else
+                if (p.Productos_Financiacion.Count > 0)
                 {
-                    string path = Server.MapPath("..\\images\\Productos\\" + p.codigo + "\\");
-
-
-                    string[] imagenes = Directory.GetFiles(path);
-                    if (imagenes.Length > 0)
+                    if (p.Productos_Financiacion.Where(x => x.Cuotas == 1).FirstOrDefault().Importe < puntosAcum)
                     {
-                        for (int i = 0; i < imagenes.Length; i++)
+                        ContactoMosaico cm = (ContactoMosaico)Page.LoadControl("Controles/ContactoMosaico.ascx");
+
+                        cm.LitDescripcion.Text = p.Descripcion;
+                        cm.LitMarca.Text = p.Marca1.descripcion;
+                        cm.LitPuntos.Text = "Puntos: " + p.Productos_Financiacion.Where(x => x.Cuotas == 1).FirstOrDefault().Importe.ToString();
+                        cm.btnLink.HRef = "http://www.ameport.org.ar/Store/ArticuloDetalle?url=&num=" + p.id;
+                        //cargo imagen
+                        string debug = ConfigurationManager.AppSettings["Debug"];
+                        if (debug == "si")
                         {
-                            FileInfo fi = new FileInfo(imagenes[i]);
-                            cm.Imagen.ImageUrl = "..\\..\\images\\Productos\\" + p.codigo + "\\" + fi.Name;
+                            cm.Imagen.ImageUrl = "/images/Canjes/no_picture.jpg";
                         }
-                    }
-                    else
-                    {
-                        //llamo que traiga la no foto
-                        cm.Imagen.ImageUrl = "/images/Canjes/no_picture.jpg";
+                        else
+                        {
+                            string path = Server.MapPath("..\\images\\Productos\\" + p.codigo + "\\");
+
+
+                            string[] imagenes = Directory.GetFiles(path);
+                            if (imagenes.Length > 0)
+                            {
+                                for (int i = 0; i < imagenes.Length; i++)
+                                {
+                                    FileInfo fi = new FileInfo(imagenes[i]);
+                                    cm.Imagen.ImageUrl = "..\\..\\images\\Productos\\" + p.codigo + "\\" + fi.Name;
+                                }
+                            }
+                            else
+                            {
+                                //llamo que traiga la no foto
+                                cm.Imagen.ImageUrl = "/images/Canjes/no_picture.jpg";
+                            }
+                        }
+                        //if (r.Contactos_Direcciones.Count > 0)
+                        //{
+                        //    Contactos_Direcciones cd = r.Contactos_Direcciones.ElementAt(0);
+
+                        //    cm.LitDireccion.Text = cd.Calle + ", " + cd.Ciudad + "; " + cd.Estado + ", " + cd.CodigoPostal;
+
+                        //}
+                        //if (r.Contactos_Telefonos.Count > 0)
+                        //{
+
+                        //    cm.LitTelefono.Text = r.Contactos_Telefonos.ElementAt(0).Numero;
+                        //}
+                        //viene buscar
+                        //if (this.accion == 2)
+                        //{
+                        //cm.btnSeleccionar.Visible = true;
+                        //cm.btnSeleccionar.PostBackUrl = "../Expedientes/ExpedientesAdmin.aspx?a=2&t=1&v=" + this.vPArticipante + "&c=" + r.Id + "&e=" + this.expediente;
+                        //}
+
+                        return cm;
                     }
                 }
-                //if (r.Contactos_Direcciones.Count > 0)
-                //{
-                //    Contactos_Direcciones cd = r.Contactos_Direcciones.ElementAt(0);
+                return null;
 
-                //    cm.LitDireccion.Text = cd.Calle + ", " + cd.Ciudad + "; " + cd.Estado + ", " + cd.CodigoPostal;
-
-                //}
-                //if (r.Contactos_Telefonos.Count > 0)
-                //{
-
-                //    cm.LitTelefono.Text = r.Contactos_Telefonos.ElementAt(0).Numero;
-                //}
-                //viene buscar
-                //if (this.accion == 2)
-                //{
-                    //cm.btnSeleccionar.Visible = true;
-                    //cm.btnSeleccionar.PostBackUrl = "../Expedientes/ExpedientesAdmin.aspx?a=2&t=1&v=" + this.vPArticipante + "&c=" + r.Id + "&e=" + this.expediente;
-                //}
-
-                return cm;
             }
             catch (Exception ex)
             {
