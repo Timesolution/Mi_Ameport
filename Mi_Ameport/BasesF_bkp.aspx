@@ -46,9 +46,9 @@
 		
 	<div id="Listado Puntos"style="margin-left: 10%">
 			
-			<p><strong>. 690 puntos</strong> = $690.- valor de cuota social mensual</p>
-			<p><strong>. 828 puntos</strong> = $690.- valor de cuota social mensual + 20%</p>
-			<p><strong>. 2.760 puntos</strong> = valor de 4 cuotas sociales</p>
+			<p><strong>. 390 puntos</strong> = $390.- valor de cuota social mensual</p>
+			<p><strong>. 468 puntos</strong> = $390.- valor de cuota social mensual + 20%</p>
+			<p><strong>. 1580 puntos</strong> = valor de 4 cuotas sociales</p>
 
 		</div>
 
@@ -61,7 +61,7 @@
 	<p>.Asociado "NO REFERENTE" ó simplemente asociado "PRESENTADOR"</p>
 
 	<ul>
-		<li> Por cada asociado nuevo que presente a AMEPORT <strong>suma 690 puntos (valor de 1 cuota social al día de la fecha).</strong></li>
+		<li> Por cada asociado nuevo que presente a AMEPORT <strong>suma 390 puntos (valor de 1 cuota social al día de la fecha).</strong></li>
 	</ul>
 
 	<br/>
@@ -71,14 +71,14 @@
 	<p>Cuando el asociado es REFERENTE, por la presentación de un nuevo asociado se pueden dar dos (2) casos:</p>
 	
 	<ul>
-		<li> Que en la solicitud de asociación no esté identificado el asociado “NO REFERENTE”  ó simplemente asociado “PRESENTADOR” ó  que por error en el llenado de la solicitud figure el REFERENTE como simplemente asociado “PRESENTADOR”. En estos casos el REFERENTE sólo <strong>suma 690 puntos.</strong></li>
+		<li> Que en la solicitud de asociación no esté identificado el asociado “NO REFERENTE”  ó simplemente asociado “PRESENTADOR” ó  que por error en el llenado de la solicitud figure el REFERENTE como simplemente asociado “PRESENTADOR”. En estos casos el REFERENTE sólo <strong>suma 390 puntos.</strong></li>
 
-		<li> Que en la solicitud de un nuevo asociado, se identifique al REFERENTE y a la vez se identifique a la persona del asociado “PRESENTADOR”. En estos casos el asociado <strong>REFERENTE suma 828 puntos</strong> y el asociado <strong>PRESENTADOR 690 puntos.</strong></li>
+		<li> Que en la solicitud de un nuevo asociado, se identifique al REFERENTE y a la vez se identifique a la persona del asociado “PRESENTADOR”. En estos casos el asociado <strong>REFERENTE suma 468 puntos</strong> y el asociado <strong>PRESENTADOR 390 puntos.</strong></li>
 	</ul>
 	
 	<br/>
 
-	<p><strong> b- Por cada convenio que AMEPORT firme con el comercio</strong>  que haya sido promovido por el asociado, sea REFERENTE o NO REFERENTE,<strong>suma 2760 puntos.</strong> </p>
+	<p><strong> b- Por cada convenio que AMEPORT firme con el comercio</strong>  que haya sido promovido por el asociado, sea REFERENTE o NO REFERENTE,<strong>suma 1580 puntos.</strong> </p>
 
 	<br/>
 </div>
@@ -134,7 +134,7 @@
 
 	<br/>
 
-	<p><strong>Premio del sorteo anual:</strong>Un viaje de turismo para dos personas, con estadía de tres (3) días en un hotel de 3 estrellas, con desayuno incluido y a elección de AMEPORT, en Cataratas del Iguazú o en Calafate a elección del ganador; más el pago en efectivo de pesos doce mil trecientos ($ 18.600.-) correspondiente al valor de 31,5 Cuotas Sociales*. <strong>Sólo habrá un primer premio.</strong></p>
+	<p><strong>Premio del sorteo anual:</strong>Un viaje de turismo para dos personas, con estadía de tres (3) días en un hotel de 3 estrellas, con desayuno incluido y a elección de AMEPORT, en Cataratas del Iguazú o en Calafate a elección del ganador; más el pago en efectivo de pesos doce mil trecientos ($ 12.300.-) correspondiente al valor de 31,5 Cuotas Sociales*. <strong>Sólo habrá un primer premio.</strong></p>
 
 	<br/>
 
