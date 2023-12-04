@@ -23,11 +23,11 @@
             <div>
                 <div>
 
-                    <h1 class="logo-name"><img src="img/Logo_Ameport.jpg" alt="Image Alternative text" title="Image Title" /></h1>
+                    <h1 class="logo-name"><img width="133px" height="100px" src="img/MiAmeport.png" alt="Image Alternative text" title="Image Title"/></h1>
 
                 </div>
-                <h3>Bienvenido a VIVI AMEPORT</h3>
-                <p>
+                <h3 style="color: white">Bienvenido a VIVI AMEPORT</h3>
+                <p style="color: white">
                     El portal de socios de Ameport
                 <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
                 </p>
