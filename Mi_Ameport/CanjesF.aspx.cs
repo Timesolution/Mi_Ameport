@@ -59,7 +59,7 @@ namespace Mi_Ameport
             }
         }
 
-        private ContactoMosaico cargarMosaicoCanje(Producto p)
+        private ContactoMosaico cargarMosaicoCanje(Productos p)
         {
             try
             {
@@ -77,7 +77,7 @@ namespace Mi_Ameport
                         ContactoMosaico cm = (ContactoMosaico)Page.LoadControl("Controles/ContactoMosaico.ascx");
 
                         cm.LitDescripcion.Text = p.Descripcion;
-                        cm.LitMarca.Text = p.Marca1.descripcion;
+                        cm.LitMarca.Text = p.Marcas.descripcion;
                         cm.LitPuntos.Text = "Puntos: " + p.Productos_Financiacion.Where(x => x.Cuotas == 1).FirstOrDefault().Importe.ToString();
                         cm.btnLink.HRef = "http://www.ameport.org.ar/Store/ArticuloDetalle?url=&num=" + p.id;
                         //cargo imagen

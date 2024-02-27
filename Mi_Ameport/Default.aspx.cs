@@ -77,7 +77,7 @@ namespace Mi_Ameport
             }
         }
 
-        private void cargarMovimientoPunto(CCPunto p)
+        private void cargarMovimientoPunto(CCPuntos p)
         {
             try
             {
@@ -266,7 +266,7 @@ namespace Mi_Ameport
             }
         }
 
-        private void cargarMovimientoNumero(NumerosSorteo  n, int v)
+        private void cargarMovimientoNumero(NumerosSorteos  n, int v)
         {
             try
             {

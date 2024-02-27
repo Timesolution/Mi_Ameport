@@ -62,7 +62,7 @@ namespace Mi_Ameport
 
                 ReportParameter rp = new ReportParameter("rpSocio", socio.Nombre + " " + socio.Apellido);
                 ReportParameter rp1 = new ReportParameter("rpDocumento", socio.Dni.ToString());
-                ReportParameter rp2 = new ReportParameter("rpNroSocio", socio.Socio1.ToString());
+                ReportParameter rp2 = new ReportParameter("rpNroSocio", socio.Socio.ToString());
                 
                 
                 //ReportParameter rp3 = new ReportParameter("rpTelefono", r.Socio1.Telefono);
@@ -165,7 +165,7 @@ namespace Mi_Ameport
 
                 ReportParameter rp = new ReportParameter("rpSocio", socio.Nombre + " " + socio.Apellido);
                 ReportParameter rp1 = new ReportParameter("rpDocumento", socio.Dni.ToString());
-                ReportParameter rp2 = new ReportParameter("rpNroSocio", socio.Socio1.ToString());
+                ReportParameter rp2 = new ReportParameter("rpNroSocio", socio.Socio.ToString());
 
 
                 //ReportParameter rp3 = new ReportParameter("rpTelefono", r.Socio1.Telefono);
